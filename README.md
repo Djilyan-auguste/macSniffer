@@ -37,14 +37,25 @@ The app scans your disk and renders a live treemap of disk usage.
 
 ## Features
 
-- 🚀 **Native SwiftUI** interface with buttery-smooth 60 FPS animations.
-- 🎨 **Deterministic colour palette** — system folders keep the same colour across scans, so you learn the map quickly.
-- 🟡 **Yellow title bar** with warm beige UI — easy on the eyes.
-- 🔒 **Single permission flow** — asks for Full Disk Access once at launch, no repeated system prompts.
-- 🧀 **Cheese logo** because it’s a little silly and memorable.
-- 🖱️ **Hover & click** to drill into folders.
-- ⌫ **Delete** files/folders directly from the treemap.
-- 📦 **Self-contained** — no external dependencies.
+### Scanning
+- ⚡ **Asynchronous, recursive scan** — walks folders without freezing the UI, even on drives with millions of files.
+- 🔄 **Live treemap updates** — blocks appear and resize in real time as the scan progresses.
+- 🛑 **Cancel anytime** — press `Escape` to stop the scan instantly.
+
+### Visualization
+- 🗺️ **Squarified treemap** — rectangle sizes are proportional to file/folder size, making big consumers obvious.
+- 🎨 **Deterministic colour palette** — `System`, `Users`, `Library`, `Applications`, etc. always keep the same colour across scans.
+- 🖱️ **Hover to inspect** — see name and exact size at a glance.
+- 🧭 **Drill down** — click a folder to zoom in; click the header to go back.
+
+### Action
+- 🗑️ **Delete in one click** — move files/folders to Trash directly from the treemap.
+- 🔎 **Reveal in Finder** — right-click any block to open its location.
+
+### UX
+- 🟡 **Native macOS look** — yellow title bar, warm beige interface, cheese logo.
+- 🔒 **Single permission flow** — Full Disk Access requested once at launch, then remembered.
+- 📦 **Self-contained** — no external dependencies, single Swift/SwiftUI codebase.
 
 ---
 
