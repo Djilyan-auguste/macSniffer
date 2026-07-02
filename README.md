@@ -1,12 +1,27 @@
-# macSniffer
+<div align="center">
+  <img src="logo.png" alt="macSniffer logo" width="160" height="160">
+  <h1>macSniffer</h1>
+  <p><strong>Disk space visualizer for macOS</strong></p>
+  <p>See what eats your storage at a glance.</p>
+
+  ![Swift Version](https://img.shields.io/badge/Swift-6.0-orange.svg)
+  ![Platform](https://img.shields.io/badge/platform-macOS%2013+-blue.svg)
+  ![License](https://img.shields.io/badge/license-MIT-green.svg)
+</div>
+
+---
 
 A native macOS disk-space visualizer inspired by [SpaceSniffer](http://www.uderzo.it/main_products/space_sniffer/). It turns your disk usage into a live, interactive treemap so you can instantly see what is eating your storage.
 
 Built with **Swift**, **SwiftUI**, and **AppKit** for the fastest, most native feel on macOS 13+.
 
-![Swift Version](https://img.shields.io/badge/Swift-6.0-orange.svg)
-![Platform](https://img.shields.io/badge/platform-macOS%2013+-blue.svg)
-![License](https://img.shields.io/badge/license-MIT-green.svg)
+---
+
+## Preview
+
+![macSniffer demo](screenshots/demo.gif)
+
+The app scans your disk and renders a live treemap of disk usage.
 
 ---
 
@@ -33,19 +48,44 @@ Built with **Swift**, **SwiftUI**, and **AppKit** for the fastest, most native f
 
 ---
 
-## Preview
+## Download
 
-![macSniffer demo](screenshots/demo.gif)
+Download the latest `.dmg` from the [Releases page](https://github.com/Djilyan-auguste/macSniffer/releases/tag/v1.0.0).
 
-The app scans your disk and renders a live treemap of disk usage.
+1. Open the `.dmg`.
+2. Drag **macSniffer** into **Applications**.
+3. Launch it. If Gatekeeper warns you, right-click the app and choose **Open** (this build is not signed or notarized).
 
-## Screenshots
+Or build from source:
 
-| Splash | Home | Scanning | Treemap |
-|---|---|---|---|
-| ![Splash](screenshots/splash.png) | ![Home](screenshots/home.png) | ![Scanning](screenshots/scanning.png) | ![Treemap](screenshots/treemap.png) |
+```bash
+git clone https://github.com/Djilyan-auguste/macSniffer.git
+cd macSniffer
+swift build
+open .build/debug/macSniffer.app
+```
 
-*(Replace these placeholders with real screenshots in the `screenshots/` folder.)*
+---
+
+## Requirements
+
+- macOS 13.0+
+- Xcode 15+ (optional — `swift build` works)
+- Swift 6.0+
+
+---
+
+## Permissions
+
+macSniffer needs **Full Disk Access** to scan protected system folders (like `~/Library`, `/System`, `/Users`, etc.).
+
+1. Launch macSniffer.
+2. Click **Open System Settings** on the permission screen.
+3. Go to **Privacy & Security → Full Disk Access**.
+4. Add **macSniffer** and toggle it on.
+5. Click **Check again** in macSniffer (or relaunch the app).
+
+This is requested **once**. After that, the app will never ask again.
 
 ---
 
@@ -93,66 +133,19 @@ Colours are assigned by **folder name**, not by randomness, so your disk looks t
 
 ---
 
-## Requirements
+## Screenshots
 
-- macOS 13.0+
-- Xcode 15+ (optional — you can build with `swift build`)
-- Swift 6.0+
+| Splash | Home | Scanning | Treemap |
+|---|---|---|---|
+| ![Splash](screenshots/splash.png) | ![Home](screenshots/home.png) | ![Scanning](screenshots/scanning.png) | ![Treemap](screenshots/treemap.png) |
 
----
-
-## Installation
-
-### Download a release (recommended)
-
-Download the latest `.dmg` from the [Releases page](https://github.com/Djilyan-auguste/macSniffer/releases/tag/v1.0.0).
-
-1. Open the `.dmg`.
-2. Drag **macSniffer** into **Applications**.
-3. Launch it. If Gatekeeper warns you, right-click the app and choose **Open** (this build is not signed or notarized).
-
-### Build from source
-
-```bash
-git clone https://github.com/Djilyan-auguste/macSniffer.git
-cd macSniffer
-swift build
-```
-
-Run the built app:
-
-```bash
-open .build/debug/macSniffer.app
-```
-
-Or create an `.app` bundle manually:
-
-```bash
-mkdir -p .build/debug/macSniffer.app/Contents/MacOS
-cp .build/arm64-apple-macosx/debug/macSniffer .build/debug/macSniffer.app/Contents/MacOS/
-cp Sources/Resources/Logo.png .build/debug/macSniffer.app/Contents/Resources/
-# Then add Info.plist and AppIcon.icns
-```
-
----
-
-## Permissions
-
-macSniffer needs **Full Disk Access** to scan protected system folders (like `~/Library`, `/System`, `/Users`, etc.).
-
-1. Launch macSniffer.
-2. Click **Open System Settings** on the permission screen.
-3. Go to **Privacy & Security → Full Disk Access**.
-4. Add **macSniffer** and toggle it on.
-5. Click **Check again** in macSniffer (or relaunch the app).
-
-This is requested **once**. After that, the app will never ask again.
+*(Replace these placeholders with real screenshots in the `screenshots/` folder.)*
 
 ---
 
 ## Roadmap
 
-- [ ] `.dmg` release with signed/notarized bundle.
+- [ ] Signed & notarized release.
 - [ ] Scan history and recent targets.
 - [ ] Export scan results to JSON/CSV.
 - [ ] Search/filter by name or size.
@@ -178,4 +171,4 @@ MIT License — see [LICENSE](LICENSE) for details.
 ## Credits
 
 - Inspired by [SpaceSniffer](http://www.uderzo.it/main_products/space_sniffer/) by UderzoSoftware.
-- Cheese logo courtesy of the macSniffer community. 🧀
+- Cheese logo by the macSniffer community. 🧀
