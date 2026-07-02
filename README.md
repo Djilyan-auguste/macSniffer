@@ -33,13 +33,19 @@ Built with **Swift**, **SwiftUI**, and **AppKit** for the fastest, most native f
 
 ---
 
+## Preview
+
+![macSniffer demo](screenshots/demo.gif)
+
+The app scans your disk and renders a live treemap of disk usage.
+
 ## Screenshots
 
 | Splash | Home | Scanning | Treemap |
 |---|---|---|---|
 | ![Splash](screenshots/splash.png) | ![Home](screenshots/home.png) | ![Scanning](screenshots/scanning.png) | ![Treemap](screenshots/treemap.png) |
 
-*(Replace these placeholders with real screenshots in a `screenshots/` folder.)*
+*(Replace these placeholders with real screenshots in the `screenshots/` folder.)*
 
 ---
 
