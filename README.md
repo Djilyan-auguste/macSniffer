@@ -173,6 +173,13 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 ---
 
+## Support
+
+If you like macSniffer, consider buying me a coffee:  
+[**☕ Buy Me a Coffee**](https://buymeacoffee.com/augustedjilyan)
+
+---
+
 ## License
 
 MIT License — see [LICENSE](LICENSE) for details.

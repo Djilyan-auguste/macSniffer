@@ -109,10 +109,30 @@ struct ContentView: View {
             }
 
             Spacer()
+
+            buyMeACoffeeButton
         }
         .padding(32)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color(red: 0.98, green: 0.95, blue: 0.90))
+    }
+
+    private var buyMeACoffeeButton: some View {
+        Button {
+            if let url = URL(string: "https://buymeacoffee.com/augustedjilyan") {
+                NSWorkspace.shared.open(url)
+            }
+        } label: {
+            HStack(spacing: 6) {
+                Image(systemName: "cup.and.saucer.fill")
+                Text("Buy me a coffee")
+            }
+            .font(.system(size: 12, weight: .semibold))
+        }
+        .buttonStyle(.bordered)
+        .controlSize(.small)
+        .tint(Color(red: 0.55, green: 0.45, blue: 0.35))
+        .padding(.bottom, 16)
     }
 
     private var gridBackground: some View {
@@ -305,7 +325,7 @@ struct ContentView: View {
             Spacer()
 
             Button {
-                if let url = URL(string: "https://www.buymeacoffee.com/macSniffer") {
+                if let url = URL(string: "https://buymeacoffee.com/augustedjilyan") {
                     NSWorkspace.shared.open(url)
                 }
             } label: {
