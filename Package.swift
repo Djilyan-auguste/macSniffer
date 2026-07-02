@@ -11,7 +11,10 @@ let package = Package(
     targets: [
         .executableTarget(
             name: "macSniffer",
-            path: "Sources"
+            path: "Sources",
+            resources: [
+                .process("Resources")
+            ]
         )
     ]
 )
