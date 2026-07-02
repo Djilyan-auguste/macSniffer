@@ -99,7 +99,11 @@ Colours are assigned by **folder name**, not by randomness, so your disk looks t
 
 ### Download a release (recommended)
 
-Check the [Releases](https://github.com/Djilyan-auguste/macSniffer/releases) page and download the latest `.dmg` or `.app.zip`.
+Download the latest `.dmg` from the [Releases page](https://github.com/Djilyan-auguste/macSniffer/releases/tag/v1.0.0).
+
+1. Open the `.dmg`.
+2. Drag **macSniffer** into **Applications**.
+3. Launch it. If Gatekeeper warns you, right-click the app and choose **Open** (this build is not signed or notarized).
 
 ### Build from source
 
