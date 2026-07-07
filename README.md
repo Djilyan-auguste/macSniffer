@@ -61,11 +61,13 @@ The app scans your disk and renders a live treemap of disk usage.
 
 ## Download
 
-Download the latest `.dmg` from the [Releases page](https://github.com/Djilyan-auguste/macSniffer/releases/tag/v1.0.0).
+Download the latest signed `.dmg` from the [Releases page](https://github.com/Djilyan-auguste/macSniffer/releases/tag/v1.0.4).
 
 1. Open the `.dmg`.
 2. Drag **macSniffer** into **Applications**.
-3. Launch it. If Gatekeeper warns you, right-click the app and choose **Open** (this build is not signed or notarized).
+3. Launch it. Since the app is signed with an ad-hoc certificate, macOS may show a security warning.
+4. To run it: **System Settings → Privacy & Security → Security** and click **Open Anyway**.
+5. Launch again.
 
 Or build from source:
 
