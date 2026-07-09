@@ -61,7 +61,7 @@ The app scans your disk and renders a live treemap of disk usage.
 
 ## Download
 
-Download the latest signed `.dmg` from the [Releases page](https://github.com/Djilyan-auguste/macSniffer/releases/tag/v1.0.4).
+Download the latest signed `.dmg` from the [Releases page](https://github.com/Djilyan-auguste/macSniffer/releases/tag/v1.0.5).
 
 1. Open the `.dmg`.
 2. Drag **macSniffer** into **Applications**.
